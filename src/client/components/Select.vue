@@ -46,7 +46,7 @@ export default {
 <style lang="sass">
   .select
     position: relative
-    min-width: 150px
+    min-width: 200px
     &__selected
       width: 100%
       background: #fff
@@ -59,7 +59,6 @@ export default {
       cursor: pointer
       &_no-bottom-border
         border-bottom: none
-      &_arrow-up
         
     &__arrow-icon
       width: 15px

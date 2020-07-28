@@ -8,14 +8,14 @@ module.exports = merge(common, {
   output: {
     chunkFilename: 'chunks/[id].[hash].js',
     filename: 'app.[hash].js',
-    publicPath: '/',
+    publicPath: '/form-vue/dist/',
     crossOriginLoading: "anonymous",
-    path: path.resolve(__dirname, 'dist/public')
+    path: path.resolve(__dirname, 'dist')
   },
-  plugins: [new VueLoaderPlugin(), new HtmlWebpackPlugin({
+  plugins: [new HtmlWebpackPlugin({
     cache: true,
     hash: true,
-    title: "Sync Reader",
+    title: "Test Form",
     filename: 'index.html',
     templateContent: `
     <!DOCTYPE html>
@@ -28,7 +28,7 @@ module.exports = merge(common, {
     </html>
     `,
     meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'},
-    output: path.resolve(__dirname, 'dist', 'public'),
+    output: path.resolve(__dirname, 'dist'),
     xhtml: true,
   })],
   module: {

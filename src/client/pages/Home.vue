@@ -270,7 +270,9 @@ export default {
     align-items: center
     justify-content: center
     flex-direction: column
-    height: 100vh
+    min-height: 100vh
+    padding-top: 1rem
+    padding-bottom: 1rem
   .error
     color: #ff7979
     margin-left: 1.5rem
@@ -297,6 +299,11 @@ export default {
     grid-template-columns: repeat(3, 1fr)
     column-gap: 1rem
     margin-top: 1rem
+    
+    @media (max-width: 800px)
+      grid-template-columns: repeat(2, 1fr)
+    @media (max-width: 500px)
+      grid-template-columns: repeat(1, 1fr)
     &__input
       padding: 0.5rem
       border-radius: 3px
@@ -319,6 +326,12 @@ export default {
       grid-column: span 3
       cursor: pointer
       user-select: none
+      @media (max-width: 800px)
+        grid-column: span 2
+      @media (max-width: 500px)
+        grid-column: span 1
+        justify-self: center
+        margin-top: 1rem
       &:hover
         background: #0202e6
       &:active, &:focus
